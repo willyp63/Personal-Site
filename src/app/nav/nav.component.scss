@@ -1,0 +1,17 @@
+@import 'colors.scss';
+@import 'z-depth.scss';
+
+.wp-nav,
+.wp-nav-placeholder {
+  height: 100px;
+}
+
+.wp-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: $white;
+  @include z-depth(2);
+}
