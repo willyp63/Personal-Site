@@ -1,0 +1,12 @@
+<div class="wp-nav-menu-bg" [@openClose]="isOpen ? 'open' : 'closed'">
+</div>
+
+<section *ngIf="isOpen" class="wp-nav-menu">
+  <nav class="wp-nav-links">
+    <ul>
+      <li *ngFor="let link of mainLinks">
+        <a (click)="shouldClose.emit()" [routerLink]="link.href">{{ link.text }}</a>
+      </li>
+    </ul>
+  </nav>
+</section>

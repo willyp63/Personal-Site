@@ -1,5 +1,4 @@
-@import 'colors.scss';
-@import 'transitions.scss';
+@import 'index.scss';
 
 .wp-footer {
   background-color: $black;
@@ -22,8 +21,8 @@
 }
 
 .wp-social-link-item {
-  margin-left: 20px;
-  font-size: 20px;
+  margin-left: $wp-icon-fs-sm;
+  font-size: $wp-icon-fs-sm;
 
   > a {
     color: $grey-600;

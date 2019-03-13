@@ -1,8 +1,8 @@
-@import 'font-sizes.scss';
+@import 'index.scss';
 
 .wp-about {
   padding: 48px 0;
 
-  font-size: $wp-font-size-md;
+  font-size: $wp-fs-md;
   line-height: 1.5;
 }

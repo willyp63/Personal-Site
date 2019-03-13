@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'wp-icons';
   src:
-    url('/assets/fonts/icons/wp-icons.ttf?juqal6') format('truetype'),
-    url('/assets/fonts/icons/wp-icons.woff?juqal6') format('woff'),
-    url('/assets/fonts/icons/wp-icons.svg?juqal6#wp-icons') format('svg');
+    url('/assets/fonts/icons/wp-icons.ttf?ts09zj') format('truetype'),
+    url('/assets/fonts/icons/wp-icons.woff?ts09zj') format('woff'),
+    url('/assets/fonts/icons/wp-icons.svg?ts09zj#wp-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.wp-icon-x:before {
+  content: "\ea0f";
+}
 .wp-icon-stackoverflow:before {
   content: "\ead0";
 }
