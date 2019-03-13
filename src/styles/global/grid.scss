@@ -1,0 +1,36 @@
+@import '../mixins/breakpoints.scss';
+
+$num-columns: 12;
+$container-padding: 5%;
+$container-max-width: 1440px;
+
+.wp-container {
+  width: 100% - ($container-padding * 2);
+  padding: 0 $container-padding;
+
+  margin: 0 auto;
+  max-width: $container-max-width;
+}
+
+.wp-row {
+  display: flex;
+}
+
+.wp-col {
+  @each $breakpoint, $breakpoint-width in $wp-breakpoints {
+    @include wp-media($breakpoint) {
+      // width classes
+      @for $i from 1 through $num-columns {
+        &.-#{$breakpoint}#{$i} {
+          width: 100% * $i / $num-columns;
+        }
+      }
+      // offset classes
+      @for $i from 1 through $num-columns {
+        &.-#{$breakpoint}-offset#{$i} {
+          margin-left: 100% * $i / $num-columns;
+        }
+      }
+    }
+  }
+}

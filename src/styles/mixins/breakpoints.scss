@@ -1,0 +1,33 @@
+$wp-bp-xs: 0px;
+$wp-bp-sm: 600px;
+$wp-bp-md: 960px;
+$wp-bp-lg: 1440px;
+
+$wp-breakpoints: (
+  xs: $wp-bp-xs,
+  sm: $wp-bp-sm,
+  md: $wp-bp-md,
+  lg: $wp-bp-lg,
+);
+
+@mixin wp-media($breakpoint, $flip: false) {
+  @if map-has-key($wp-breakpoints, $breakpoint) {
+    $min-width: map-get($wp-breakpoints, $breakpoint);
+
+    @if $min-width == 0 {
+      @content;
+    } @else {
+      @if $flip {
+        @media screen and (max-width: $min-width - 1) {
+          @content;
+        }
+      } @else {
+        @media screen and (min-width: $min-width) {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @error 'wp-media was passed an unsupported breakpoint: #{$breakpoint}';
+  }
+}

@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'wp-icons';
+  src:
+    url('/assets/fonts/icons/wp-icons.ttf?juqal6') format('truetype'),
+    url('/assets/fonts/icons/wp-icons.woff?juqal6') format('woff'),
+    url('/assets/fonts/icons/wp-icons.svg?juqal6#wp-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="wp-icon-"], [class*=" wp-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'wp-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wp-icon-stackoverflow:before {
+  content: "\ead0";
+}
+.wp-icon-hamburger:before {
+  content: "\e9bd";
+}
+.wp-icon-github:before {
+  content: "\eab0";
+}
+.wp-icon-linkedin:before {
+  content: "\eac9";
+}

@@ -1,7 +1,35 @@
 @import 'colors.scss';
+@import 'transitions.scss';
 
 .wp-footer {
-  height: 400px;
   background-color: $black;
-  color: $white;
+  color: $grey-600;
+}
+
+.wp-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wp-copyright {
+
+}
+
+.wp-social-links {
+  padding: 20px 0;
+  display: flex;
+}
+
+.wp-social-link-item {
+  margin-left: 20px;
+  font-size: 20px;
+
+  > a {
+    color: $grey-600;
+    transition: color $wp-tick;
+    &:hover {
+      color: $white;
+    }
+  }
 }

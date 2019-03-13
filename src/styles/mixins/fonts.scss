@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+$exo: 'Exo 2', sans-serif;
+$ps2p: 'Press Start 2P', cursive;
+
+// Exo 2
+@mixin exo {
+  font-family: $exo;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin exo-italic {
+  font-family: $exo;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin exo-semibold {
+  font-family: $exo;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin exo-semibold-italic {
+  font-family: $exo;
+  font-weight: 600;
+  font-style: italic;
+}
+
+// Press Start 2P
+@mixin ps2p {
+  font-family: $ps2p;
+  font-weight: 400;
+  font-style: normal;
+}
