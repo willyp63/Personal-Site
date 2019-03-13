@@ -1,17 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'wp-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
-export class HeroComponent implements OnInit {
-
-  public readonly imgUrl = '/assets/images/heroes/baker-beach.jpg';
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class HeroComponent {
+  @Input() public imgUrl: string;
 }
