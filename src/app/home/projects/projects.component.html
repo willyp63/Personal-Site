@@ -3,7 +3,18 @@
     <h1 class="wp-title">PROJECTS</h1>
     <ul class="wp-row">
       <li *ngFor="let project of projects" class="wp-project-item wp-col -xs12 -sm6 -md4">
-        <div class="wp-project-img" [style.background-color]="project.color"></div>
+        <div class="wp-project-img" [style.background-image]="'url(' + project.imgUrl + ')'">
+          <div class="wp-project-overlay">
+            <div class="wp-project-details">
+              <span class="wp-project-name">{{ project.name }}</span>
+              <span class="wp-project-skills">{{ project.skills.join(' + ') }}</span>
+              <div class="wp-project-links">
+                <a [href]="project.sourceCodeLink">Code</a>
+                <a [href]="project.liveLink">Live</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
     </ul>
   </div>

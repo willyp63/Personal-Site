@@ -29,10 +29,23 @@
   }
 }
 
+.wp-note-graphic-wrap {
+  @include hexagon-wrap(100px);
+}
+
 .wp-note-graphic {
-  width: 50%;
-  padding-top: 50%;
-  background-color: $deep-purple-500;
+  @include hexagon;
+  background-color: $light-blue-800;
+
+  > i {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 32px;
+    z-index: 1;
+    font-size: $wp-icon-fs-lg;
+    color: $white;
+  }
 }
 
 .wp-note-title {
@@ -46,6 +59,7 @@
 .wp-note-text {
   padding-top: 8px;
 
+  @include open-sans-light;
   font-size: $wp-fs-md;
   text-align: center;
   line-height: 1.25;
@@ -64,9 +78,7 @@
 }
 
 .wp-me-img {
-  width: 50%;
-  padding-top: 50%;
-  background-color: $teal-500;
+
 }
 
 .wp-me-title {
@@ -80,6 +92,7 @@
 .wp-me-text {
   padding-top: 8px;
 
+  @include open-sans-light;
   font-size: $wp-fs-md;
   text-align: center;
   line-height: 1.25;
@@ -88,5 +101,4 @@
 .wp-skill-graph {
   width: 100%;
   padding-top: 60%;
-  background-color: $light-blue-500;
 }

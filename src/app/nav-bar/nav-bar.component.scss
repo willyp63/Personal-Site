@@ -5,12 +5,13 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
   padding: 24px 0;
 }
 
 .wp-nav-bar-inner {
   position: relative;
-  z-index: 999;
+  z-index: 1;
 
   display: flex;
   justify-content: space-between;

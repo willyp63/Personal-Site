@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SkillChartData } from '@app/shared/components/skill-chart/skill-chart.model';
 
 @Component({
   selector: 'wp-about',
@@ -6,6 +7,51 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+
+  readonly skillChartData: SkillChartData = {
+    skills: [
+      {
+        name: 'CSS',
+        proficiency: 80,
+      },
+      {
+        name: 'HTML',
+        proficiency: 90,
+      },
+      {
+        name: 'React',
+        proficiency: 70,
+      },
+      {
+        name: 'Javascript',
+        proficiency: 80,
+      },
+      {
+        name: 'Angular',
+        proficiency: 70,
+      },
+      {
+        name: 'Node.js',
+        proficiency: 50,
+      },
+      {
+        name: 'Ruby/Rails',
+        proficiency: 40,
+      },
+      {
+        name: 'Mock Skill 0',
+        proficiency: Math.floor(Math.random() * 40) + 61,
+      },
+      {
+        name: 'Mock Skill 1',
+        proficiency: Math.floor(Math.random() * 40) + 61,
+      },
+      {
+        name: 'Mock Skill 2',
+        proficiency: Math.floor(Math.random() * 40) + 61,
+      },
+    ],
+  };
 
   readonly noteItems = [
     {

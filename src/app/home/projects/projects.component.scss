@@ -1,8 +1,10 @@
 @import 'index.scss';
 
+$bg-color: $grey-100;
+
 .wp-projects {
   padding-bottom: 128px;
-  background-color: $grey-100;
+  background-color: $bg-color;
 }
 
 .wp-title {
@@ -15,5 +17,77 @@
 }
 
 .wp-project-img {
+  position: relative;
   padding-top: 100%;
+  background-size: cover;
+  background-position: 50% 50%; 
+}
+
+.wp-project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: $bg-color;
+  opacity: 0;
+  transition: opacity $wp-tick;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.wp-project-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wp-project-name {
+  padding-bottom: 4px;
+
+  @include open-sans-semibold;
+  font-size: $wp-fs-lg;
+}
+
+.wp-project-skills {
+  padding-bottom: 48px;
+
+  @include open-sans-italic;
+  font-size: $wp-fs-md;
+  color: $pink-A400;
+}
+
+.wp-project-links {
+  display: flex;
+
+  > a {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 12px;
+    border: 2px solid $pink-A400;
+    border-radius: 2px;
+
+    @include open-sans-semibold;
+    font-size: $wp-fs-sm;
+    color: $pink-A400;
+    text-align: center;
+
+    transition-property: color, background-color;
+    transition-duration: $wp-tick;
+
+    margin-right: 12px;
+    ~ a { margin-right: 0; }
+
+    &:hover {
+      color: $bg-color;
+      background-color: $pink-A400;
+    }
+  }
 }

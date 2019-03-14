@@ -1,0 +1,11 @@
+<div class="wp-skill-chart">
+  <div *ngFor="let skill of data.skills" class="wp-skill-row">
+    <div class="wp-skill-name">{{ skill.name }}</div>
+    <div class="wp-skill-proficiency">
+      <div class="wp-skill-proficiency-bar">
+        <div class="wp-skill-proficiency-bar-inner" [style.width]="skill.proficiency + '%'"></div>
+      </div>
+      <div class="wp-skill-proficiency-label">{{ skill.proficiency / 100 | percent:'1.0' }}</div>
+    </div>
+  </div>
+</div>
