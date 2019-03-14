@@ -39,48 +39,13 @@ $bg-color: $blue-grey-900;
 }
 
 .wp-btn {
+  @include wp-btn($white, $bg-color);
+
   margin-top: 12px;
-  height: 36px;
-  padding: 0 12px;
-  border: 2px solid $white;
-  border-radius: 2px;
+  @include wp-media(sm) { margin-top: 20px; }
 
-  display: flex;
-  align-items: center;
-
-  @include open-sans-semibold;
-  font-size: $wp-fs-sm;
-  color: $white;
-
-  transition-property: color, background-color;
-  transition-duration: $wp-tick;
-
-  > i {
-    margin-left: 8px;
-    font-size: $wp-icon-fs-sm;
-
-    transition: transform $wp-tick;
-  }
-
-  &:hover {
-    background-color: $white;
-    color: $bg-color;
-
-    > i {
-      transform: rotate(90deg);
-    }
-  }
-
-  @include wp-media(sm) {
-    margin-top: 20px;
-    height: 48px;
-    padding: 0 20px;
-    font-size: $wp-fs-md;
-
-    > i {
-      font-size: $wp-icon-fs-sm;
-    }
-  }
+  > i { transition: transform $wp-tick; }
+  &:hover > i { transform: rotate(90deg); }
 }
 
 .wp-home-rest {

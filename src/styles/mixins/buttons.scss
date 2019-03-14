@@ -1,0 +1,34 @@
+@mixin wp-btn($color, $bg-color) {
+  height: 36px;
+  padding: 0 12px;
+  border: 2px solid $color;
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+
+  @include open-sans-semibold;
+  font-size: $wp-fs-sm;
+
+  color: $color;
+  background-color: $bg-color;
+
+  transition-property: color, background-color;
+  transition-duration: $wp-tick;
+
+  > i {
+    margin-left: 8px;
+    font-size: $wp-icon-fs-sm;
+  }
+
+  &:hover {
+    background-color: $color;
+    color: $bg-color;
+  }
+
+  @include wp-media(md) {
+    height: 48px;
+    padding: 0 20px;
+    font-size: $wp-fs-md;
+  }
+}

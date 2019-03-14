@@ -1,0 +1,55 @@
+@import 'index.scss';
+
+$article-margin: 40px;
+
+.wp-blog {
+  padding-bottom: 128px - $article-margin;
+}
+
+.wp-title {
+  @include h1;
+  text-align: center;  
+}
+
+.wp-article-item {
+  padding: 0 ($article-margin / 2);
+  padding-bottom: $article-margin;
+}
+
+.wp-article-img {
+  padding-top: 56.25%;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.wp-article-title {
+  padding-top: 20px;
+
+  @include open-sans-semibold;
+  font-size: $wp-fs-lg;
+  color: $grey-700;
+}
+
+.wp-article-date {
+  padding-top: 8px;
+
+  @include open-sans-light;
+  font-size: $wp-fs-sm;
+  color: $grey-700;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 48px;
+    margin: 12px 0 0 0;
+    border-bottom: 2px solid $pink-A400;
+  }
+}
+
+.wp-article-teaser {
+  padding-top: 20px;
+
+  @include open-sans-light;
+  font-size: $wp-fs-md;
+  line-height: 1.25;
+}
