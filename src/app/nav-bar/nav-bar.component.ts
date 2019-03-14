@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, HostListener } from '@angular/core';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @Component({
@@ -10,7 +10,17 @@ export class NavBarComponent {
 
   @ViewChild(NavMenuComponent) menu: NavMenuComponent;
 
-  isMenuOpen = false;
+  isMenuOpen: boolean = false;
+  isDark: boolean = true;
+
+  @HostListener('window:scroll')
+  onScroll() {
+    if (window.scrollY >= window.innerHeight) {
+      this.isDark = false;
+    } else {
+      this.isDark = true;
+    }
+  }
 
   openMenu() {
     this.isMenuOpen = true;

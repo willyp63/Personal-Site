@@ -1,18 +1,11 @@
 @import 'index.scss';
 
-.wp-nav-bar-placeholder {
-  height: 76px; // measured, keep up-to-date
-}
-
 .wp-nav-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 24px 0;
-
-  background-color: $white;
-  @include z-depth(2);
 }
 
 .wp-nav-bar-inner {
@@ -25,10 +18,19 @@
 }
 
 .wp-logo {
-  @include ps2p;
-  font-size: 28px;
+  @include open-sans-semibold;
+  font-size: $wp-fs-xlg;
 }
 
 .wp-hamburger {
-  font-size: $wp-icon-fs-md;
+  font-size: $wp-icon-fs-lg;
+  color: $black;
+  transition: color $wp-tick;
+
+  &:hover { color: $grey-800; }
+
+  &.-is-dark {
+    color: $white;
+    &:hover { color: $grey-300; }
+  }
 }

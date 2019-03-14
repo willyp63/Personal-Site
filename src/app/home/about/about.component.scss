@@ -1,0 +1,92 @@
+@import 'index.scss';
+
+.wp-projects {
+  padding-bottom: 128px;
+}
+
+.wp-title {
+  @include h1;
+  text-align: center;  
+}
+
+.wp-about-notes {
+  padding-bottom: 64px;
+}
+
+.wp-about-note-item {
+  
+}
+
+.wp-about-note-item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+
+  & ~ .wp-about-note-item-inner {
+    padding-left: 20px;
+  }
+}
+
+.wp-note-graphic {
+  width: 50%;
+  padding-top: 50%;
+  background-color: $deep-purple-500;
+}
+
+.wp-note-title {
+  padding-top: 20px;
+
+  @include open-sans-semibold;
+  font-size: $wp-fs-lg;
+  text-align: center;
+}
+
+.wp-note-text {
+  padding-top: 8px;
+
+  font-size: $wp-fs-md;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.wp-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 48px;
+
+  @include wp-media(md) {
+    padding-bottom: 0;
+  }
+}
+
+.wp-me-img {
+  width: 50%;
+  padding-top: 50%;
+  background-color: $teal-500;
+}
+
+.wp-me-title {
+  padding-top: 20px;
+
+  @include open-sans-semibold;
+  font-size: $wp-fs-lg;
+  text-align: center;
+}
+
+.wp-me-text {
+  padding-top: 8px;
+
+  font-size: $wp-fs-md;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.wp-skill-graph {
+  width: 100%;
+  padding-top: 60%;
+  background-color: $light-blue-500;
+}

@@ -1,0 +1,88 @@
+@import 'index.scss';
+
+$bg-color: $blue-grey-900;
+
+.wp-home {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: $bg-color;
+  color: $white;
+}
+
+.wp-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wp-text {
+  @include black-han-sans;
+  font-size: $wp-fs-lg;
+  text-align: center;
+  line-height: 1.25;
+
+  @include wp-media(sm) {
+    font-size: $wp-fs-xlg;
+  }
+
+  @include wp-media(md) {
+    font-size: $wp-fs-xxlg;
+  }
+}
+
+.wp-highlighted-text {
+  color: $pink-A400;
+  font-style: italic;
+}
+
+.wp-btn {
+  margin-top: 12px;
+  height: 36px;
+  padding: 0 12px;
+  border: 2px solid $white;
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+
+  @include open-sans-semibold;
+  font-size: $wp-fs-sm;
+  color: $white;
+
+  transition-property: color, background-color;
+  transition-duration: $wp-tick;
+
+  > i {
+    margin-left: 8px;
+    font-size: $wp-icon-fs-sm;
+
+    transition: transform $wp-tick;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $bg-color;
+
+    > i {
+      transform: rotate(90deg);
+    }
+  }
+
+  @include wp-media(sm) {
+    margin-top: 20px;
+    height: 48px;
+    padding: 0 20px;
+    font-size: $wp-fs-md;
+
+    > i {
+      font-size: $wp-icon-fs-sm;
+    }
+  }
+}
+
+.wp-home-rest {
+  
+}

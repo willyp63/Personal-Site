@@ -1,0 +1,30 @@
+@import 'index.scss';
+
+.wp-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: $grey-600;
+  a { transition: color $wp-tick; }
+  a:hover { color: $white; }
+
+  &.-inverse-colors {
+    color: $white;
+    a:hover { color: $grey-300; }
+  }
+}
+
+.wp-copyright {
+  @include open-sans-light;
+}
+
+.wp-social-links {
+  padding: 20px 0;
+  display: flex;
+}
+
+.wp-social-link-item {
+  margin-left: $wp-icon-fs-sm;
+  font-size: $wp-icon-fs-sm;
+}

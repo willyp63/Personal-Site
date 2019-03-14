@@ -1,37 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Exo+2:400,400i,600,600i');
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
 
-$exo: 'Exo 2', sans-serif;
-$ps2p: 'Press Start 2P', cursive;
+$open-sans: 'Open Sans', sans-serif;
+$black-han-sans: 'Black Han Sans', sans-serif;
 
-// Exo 2
-@mixin exo {
-  font-family: $exo;
+// Open Sans
+@mixin open-sans-light {
+  font-family: $open-sans;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin open-sans {
+  font-family: $open-sans;
   font-weight: 400;
   font-style: normal;
 }
 
-@mixin exo-italic {
-  font-family: $exo;
+@mixin open-sans-italic {
+  font-family: $open-sans;
   font-weight: 400;
   font-style: italic;
 }
 
-@mixin exo-semibold {
-  font-family: $exo;
+@mixin open-sans-semibold {
+  font-family: $open-sans;
   font-weight: 600;
   font-style: normal;
 }
 
-@mixin exo-semibold-italic {
-  font-family: $exo;
-  font-weight: 600;
-  font-style: italic;
-}
-
-// Press Start 2P
-@mixin ps2p {
-  font-family: $ps2p;
+// Black Han San
+@mixin black-han-sans {
+  font-family: $black-han-sans;
   font-weight: 400;
   font-style: normal;
 }

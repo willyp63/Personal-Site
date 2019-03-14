@@ -14,7 +14,7 @@ import { wpAnimationTicks } from '@app/shared/animations/constants';
       })),
       state('closed', style({
         'opacity': 0,
-        'transform': 'scale(0.85)',
+        'transform': 'scale(0.9)',
       })),
       transition('closed => open', [
         animate(wpAnimationTicks(1 / 3)),
@@ -37,7 +37,8 @@ export class NavMenuComponent {
     },
     {
       text: 'RESUME',
-      href: '/resume',
+      href: '/assets/resumes/resume.pdf',
+      isAsset: true,
     },
     {
       text: 'CONTACT',

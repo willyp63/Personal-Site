@@ -1,0 +1,10 @@
+<section class="wp-projects">
+  <div class="wp-container">
+    <h1 class="wp-title">PROJECTS</h1>
+    <ul class="wp-row">
+      <li *ngFor="let project of projects" class="wp-project-item wp-col -xs12 -sm6 -md4">
+        <div class="wp-project-img" [style.background-color]="project.color"></div>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -3,6 +3,7 @@
 .wp-about {
   padding: 48px 0;
 
+  @include open-sans;
   font-size: $wp-fs-md;
   line-height: 1.5;
 }

@@ -2,33 +2,4 @@
 
 .wp-footer {
   background-color: $black;
-  color: $grey-600;
-}
-
-.wp-footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.wp-copyright {
-
-}
-
-.wp-social-links {
-  padding: 20px 0;
-  display: flex;
-}
-
-.wp-social-link-item {
-  margin-left: $wp-icon-fs-sm;
-  font-size: $wp-icon-fs-sm;
-
-  > a {
-    color: $grey-600;
-    transition: color $wp-tick;
-    &:hover {
-      color: $white;
-    }
-  }
 }

@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  public readonly heroImgUrl = '/assets/images/heroes/baker-beach.jpg';
-
   constructor() { }
 
   ngOnInit() {

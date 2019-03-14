@@ -1,0 +1,13 @@
+@mixin h1 {
+  padding: 96px 0 64px 0;
+  font-size: $wp-fs-xxlg;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 128px;
+    margin: 0 auto;
+    padding-top: 12px;
+    border-bottom: 3px solid $black;
+  }
+}

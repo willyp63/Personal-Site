@@ -5,8 +5,12 @@
   <nav class="wp-nav-links">
     <ul>
       <li *ngFor="let link of mainLinks">
-        <a (click)="shouldClose.emit()" [routerLink]="link.href">{{ link.text }}</a>
+        <a *ngIf="!link.isAsset" (click)="shouldClose.emit()" [routerLink]="link.href">{{ link.text }}</a>
+        <a *ngIf="link.isAsset" [href]="link.href">{{ link.text }}</a>
       </li>
     </ul>
   </nav>
+  <footer class="wp-footer">
+    <wp-footer-inner [inverseColors]="true"></wp-footer-inner>
+  </footer>
 </section>

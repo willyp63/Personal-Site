@@ -10,7 +10,7 @@
 }
 
 .wp-nav-menu-bg {
-  background-color: $red-500;
+  background-color: $red-A200;
   pointer-events: none;
 }
 
@@ -26,12 +26,48 @@
     align-items: center;
 
     > li {
-      margin-bottom: 28px;
+      margin-bottom: 24px;
 
       > a {
-        @include exo-semibold;
-        font-size: $wp-fs-xxlg;
+        @include open-sans;
+        font-size: $wp-fs-xlg;
+        letter-spacing: 2px;
+        color: $white;
+
+        &::after {
+          display: block;
+          content: '';
+          margin-top: 2px;
+          width: 0;
+          height: 4px;
+          border-radius: 2px;
+          background-color: $white;
+          transition: width $wp-tick;
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+
+      @include wp-media(md) {
+        margin-bottom: 36px;
+
+        > a {
+          @include open-sans;
+          font-size: $wp-fs-xxlg;
+          letter-spacing: 4px;
+        }
       }
     }
   }
+}
+
+.wp-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

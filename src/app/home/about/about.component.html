@@ -1,0 +1,24 @@
+<section class="wp-projects wp-container">
+  <h1 class="wp-title">ABOUT</h1>
+  <ul class="wp-about-notes wp-row">
+    <li *ngFor="let item of noteItems" class="wp-about-note-item wp-col -xs12 -sm6 -md3">
+      <div class="wp-about-note-item-inner">
+        <div class="wp-note-graphic"></div>
+        <div class="wp-note-title">{{ item.title }}</div>
+        <div class="wp-note-text">{{ item.text }}</div>
+      </div>
+    </li>
+  </ul>
+  <div class="wp-row">
+    <div class="wp-col -xs12 -md5">
+      <div class="wp-me">
+        <div class="wp-me-img"></div>
+        <div class="wp-me-title">Who's this guy?</div>
+        <div class="wp-me-text">I'm the Front-End Developer for EyeCue Lab in Portland, OR. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.</div>
+      </div>
+    </div>
+    <div class="wp-col -xs12 -md6 -md-offset1">
+      <div class="wp-skill-graph"></div>
+    </div>
+  </div>
+</section>

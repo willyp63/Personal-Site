@@ -1,0 +1,19 @@
+@import 'index.scss';
+
+.wp-projects {
+  padding-bottom: 128px;
+  background-color: $grey-100;
+}
+
+.wp-title {
+  @include h1;
+  text-align: center;  
+}
+
+.wp-project-item {
+  
+}
+
+.wp-project-img {
+  padding-top: 100%;
+}
