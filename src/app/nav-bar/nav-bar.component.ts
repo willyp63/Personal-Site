@@ -1,5 +1,6 @@
-import { Component, ViewChild, HostListener } from '@angular/core';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { Component, HostListener, Input } from '@angular/core';
+import { NavBarColorInterface, NavBarColorsAllBlack } from './nav-bar-color.model';
+import { whiteColor } from '@app/shared/utils/colors';
 
 @Component({
   selector: 'wp-nav-bar',
@@ -8,27 +9,45 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 })
 export class NavBarComponent {
 
-  @ViewChild(NavMenuComponent) menu: NavMenuComponent;
+  @Input() colors: NavBarColorInterface[] = NavBarColorsAllBlack;
 
-  isMenuOpen: boolean = false;
-  isDark: boolean = true;
+  currentColor = this.getCurrentColor();
+  isMenuOpen = false;
 
   @HostListener('window:scroll')
-  onScroll() {
-    if (window.scrollY >= window.innerHeight) {
-      this.isDark = false;
-    } else {
-      this.isDark = true;
-    }
+  onScroll(): void {
+    this.calcCurrentColor();
   }
 
-  openMenu() {
+  openMenu(): void {
     this.isMenuOpen = true;
     window.document.body.style.overflow = 'hidden';
+    this.calcCurrentColor();
   }
 
-  closeMenu() {
+  closeMenu(): void {
     this.isMenuOpen = false;
     window.document.body.style.overflow = 'auto';
+    this.calcCurrentColor();
+  }
+
+  private calcCurrentColor(): void {
+    this.currentColor = this.getCurrentColor();
+  }
+
+  private getCurrentColor(): string {
+    if (this.isMenuOpen) {
+      return whiteColor;
+    }
+
+    let currentColor = this.colors[0];
+    for (let i = 1; i < this.colors.length; i++) {
+      if (window.scrollY >= this.colors[i].minScrollY) {
+        currentColor = this.colors[i];
+      } else {
+        break;
+      }
+    }
+    return currentColor.hex;
   }
 }

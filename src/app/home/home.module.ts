@@ -6,11 +6,13 @@ import { AboutComponent } from './about/about.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
+import { AppLayoutModule } from '@app/app-layout/app-layout.module';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
+    AppLayoutModule,
   ],
   declarations: [
     HomeComponent,

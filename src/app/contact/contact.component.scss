@@ -1,29 +1,38 @@
 @import 'index.scss';
 
-.wp-contact-form {
-  padding: 48px 0;
+$bg-color: $grey-100;
 
+.wp-contact {
+  padding-bottom: 128px;
+  background-color: $bg-color;
+}
+
+.wp-title {
+  @include h1;
+  text-align: center;
+}
+
+.wp-contact-form {
   fieldset {
-    padding-bottom: 48px;
+    padding-bottom: 32px;
 
     > label {
       display: block;
-      padding-bottom: 20px;
+      padding-bottom: 12px;
 
       @include open-sans-semibold;
       color: $grey-600;
-      font-size: $wp-fs-md;
+      font-size: $wp-fs-sm;
     }
 
     > input,
     > textarea {
       display: block;
       width: 100%;
-      max-width: 600px;
-      height: 32px;
-      line-height: 32px;
-
+      height: $wp-fs-md * 1.5;
+      line-height: $wp-fs-md * 1.5;
       font-size: $wp-fs-md;
+      border: 1px solid $grey-400;
     }
 
     > textarea {
@@ -32,7 +41,6 @@
   }
 
   button[type="submit"] {
-    height: 32px;
-    padding: 0 16px;
+    @include wp-btn($pink-A400, $bg-color)
   }
 }

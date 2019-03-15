@@ -25,13 +25,5 @@
 
 .wp-hamburger {
   font-size: $wp-icon-fs-lg;
-  color: $black;
   transition: color $wp-tick;
-
-  &:hover { color: $grey-800; }
-
-  &.-is-dark {
-    color: $white;
-    &:hover { color: $grey-300; }
-  }
 }

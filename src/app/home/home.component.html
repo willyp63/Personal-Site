@@ -1,19 +1,21 @@
-<section class="wp-home">
-  <div class="wp-text-block">
-    <div class="wp-text">
-      Hello, I'm <span class="wp-highlighted-text">Wil Pirino</span>.
-      <br>
-      I'm a full-stack web developer.
+<wp-app-layout>
+  <section class="wp-home">
+    <div class="wp-text-block">
+      <div class="wp-text">
+        Hello, I'm <span class="wp-highlighted-text">Wil Pirino</span>.
+        <br>
+        I'm a full-stack web developer.
+      </div>
+      <button class="wp-btn" (click)="scrollDown()">
+        View my work
+        <i class="wp-icon-arrow-right"></i>
+      </button>
     </div>
-    <button class="wp-btn" (click)="scrollDown()">
-      View my work
-      <i class="wp-icon-arrow-right"></i>
-    </button>
-  </div>
-</section>
-<section class="wp-home-rest" #rest>
-  <wp-about></wp-about>
-  <wp-projects></wp-projects>
-  <wp-blog></wp-blog>
-  <wp-contact></wp-contact>
-</section>
+  </section>
+  <section class="wp-home-rest" #rest>
+    <wp-about></wp-about>
+    <wp-projects></wp-projects>
+    <wp-blog></wp-blog>
+    <wp-contact></wp-contact>
+  </section>  
+</wp-app-layout>

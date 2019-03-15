@@ -23,7 +23,7 @@ import { wpAnimationTicks } from '@app/shared/animations/constants';
   ]
 })
 export class NavMenuComponent {
-  @Input() isOpen: boolean = false;
+  @Input() isOpen = false;
   @Output() shouldClose: EventEmitter<void> = new EventEmitter<void>();
 
   readonly mainLinks = [
