@@ -1,9 +1,11 @@
 @import 'index.scss';
 
+$bg-color: $grey-100;
 $article-margin: 40px;
 
 .wp-blog {
   padding-bottom: 128px - $article-margin;
+  background-color: $bg-color;
 }
 
 .wp-title {

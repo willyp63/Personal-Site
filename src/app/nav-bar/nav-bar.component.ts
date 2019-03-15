@@ -1,18 +1,22 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { NavBarColorInterface, NavBarColorsAllBlack } from './nav-bar-color.model';
-import { whiteColor } from '@app/shared/utils/colors';
+import { whiteColor, blackColor } from '@app/shared/utils/colors';
 
 @Component({
   selector: 'wp-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
 
   @Input() colors: NavBarColorInterface[] = NavBarColorsAllBlack;
 
-  currentColor = this.getCurrentColor();
+  currentColor = blackColor;
   isMenuOpen = false;
+
+  ngOnInit() {
+    this.calcCurrentColor();
+  }
 
   @HostListener('window:scroll')
   onScroll(): void {

@@ -3,11 +3,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from '@app/app.component';
-import { RoutingModule } from './routes/routing.module';
-import { HomeModule } from './home/home.module';
-import { AboutModule } from './about/about.module';
-import { ContactModule } from './contact/contact.module';
-import { PageNotFoundModule } from './page-not-found/page-not-found.module';
+import { RoutingModule } from '@app/routes/routing.module';
+import { HomeModule } from '@app/home/home.module';
+import { AboutModule } from '@app/about/about.module';
+import { ContactModule } from '@app/contact/contact.module';
+import { PageNotFoundModule } from '@app/page-not-found/page-not-found.module';
+import { ProjectsModule } from '@app/projects/projects.module';
+import { BlogModule } from './blog/blog.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +20,8 @@ import { PageNotFoundModule } from './page-not-found/page-not-found.module';
     HomeModule,
     ContactModule,
     AboutModule,
+    ProjectsModule,
+    BlogModule,
     PageNotFoundModule,
   ],
   providers: [],

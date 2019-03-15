@@ -38,16 +38,9 @@ $bg-color: $blue-grey-900;
   font-style: italic;
 }
 
-.wp-btn {
+.wp-link {
   @include wp-btn($white, $bg-color);
 
   margin-top: 12px;
   @include wp-media(sm) { margin-top: 20px; }
-
-  > i { transition: transform $wp-tick; }
-  &:hover > i { transform: rotate(90deg); }
-}
-
-.wp-home-rest {
-  
 }

@@ -1,4 +1,4 @@
-<wp-app-layout>
+<wp-app-layout [navBarColors]="navBarColors" [showFooter]="false">
   <section class="wp-home">
     <div class="wp-text-block">
       <div class="wp-text">
@@ -6,16 +6,10 @@
         <br>
         I'm a full-stack web developer.
       </div>
-      <button class="wp-btn" (click)="scrollDown()">
+      <a class="wp-link" routerLink="/projects">
         View my work
         <i class="wp-icon-arrow-right"></i>
-      </button>
+      </a>
     </div>
   </section>
-  <section class="wp-home-rest" #rest>
-    <wp-about></wp-about>
-    <wp-projects></wp-projects>
-    <wp-blog></wp-blog>
-    <wp-contact></wp-contact>
-  </section>  
 </wp-app-layout>

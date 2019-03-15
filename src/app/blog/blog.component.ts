@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'wp-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent {
 
   readonly articles = [
     {
@@ -33,10 +33,5 @@ export class BlogComponent implements OnInit {
       teaserText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi volutpat facilisis felis, vitae mattis leo finibus...',
     },
   ];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

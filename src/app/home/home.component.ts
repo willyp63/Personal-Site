@@ -1,21 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavBarColorsAllWhite } from '@app/nav-bar/nav-bar-color.model';
 
 @Component({
   selector: 'wp-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-
-  @ViewChild('rest') rest: ElementRef;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  scrollDown() {
-    this.rest.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-  }
-
+export class HomeComponent {
+  readonly navBarColors = NavBarColorsAllWhite;
 }

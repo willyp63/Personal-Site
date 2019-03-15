@@ -4,18 +4,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 999;
-  padding: 24px 0;
-}
-
-.wp-nav-bar-inner {
-  position: relative;
-  z-index: 1;
+  z-index: $nav-bar-z-index;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
+
+  pointer-events: none;
 }
 
 .wp-logo {
@@ -24,6 +18,10 @@
 }
 
 .wp-hamburger {
+  margin-top: 20px;
+
   font-size: $wp-icon-fs-lg;
   transition: color $wp-tick;
+
+  pointer-events: all;
 }

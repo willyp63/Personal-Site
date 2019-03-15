@@ -5,6 +5,8 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: $nav-bar-menu-z-index;
+
   width: 100%;
   height: 100vh;
 }
@@ -37,10 +39,9 @@
         &::after {
           display: block;
           content: '';
-          margin-top: 2px;
+          margin-top: 3px;
           width: 0;
-          height: 4px;
-          border-radius: 2px;
+          height: 3px;
           background-color: $white;
           transition: width $wp-tick;
         }
@@ -59,6 +60,45 @@
           @include open-sans;
           font-size: $wp-fs-xxlg;
           letter-spacing: 4px;
+        }
+      }
+    }
+  }
+}
+
+.wp-nav-secondary-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  > ul {
+    padding: 20px 0;
+    display: flex;
+
+    > li {
+      padding: 0 20px;
+
+      ~ li {
+        border-left: 2px solid $white;
+      }
+
+      > a {
+        color: $white;
+
+        &::after {
+          display: block;
+          content: '';
+          margin-top: 3px;
+          width: 0;
+          height: 2px;
+          background-color: $white;
+          transition: width $wp-tick;
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
         }
       }
     }

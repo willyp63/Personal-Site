@@ -8,4 +8,5 @@ import { NavBarColorInterface, NavBarColorsAllBlack } from '@app/nav-bar/nav-bar
 })
 export class AppLayoutComponent {
   @Input() navBarColors: NavBarColorInterface[] = NavBarColorsAllBlack;
+  @Input() showFooter = true;
 }
