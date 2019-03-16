@@ -1,29 +1,31 @@
 <wp-app-layout>
-  <section class="wp-projects wp-container">
-    <h1 class="wp-title">ABOUT</h1>
-    <ul class="wp-about-notes wp-row">
-      <li *ngFor="let item of noteItems" class="wp-about-note-item wp-col -xs12 -sm6 -md3">
-        <div class="wp-about-note-item-inner">
-          <div class="wp-note-graphic-wrap">
-            <div class="wp-note-graphic">
-              <i class="wp-icon-x"></i>
+  <section class="wp-projects">
+    <div class="wp-container">
+      <h1 class="wp-title">ABOUT</h1>
+      <ul class="wp-about-notes wp-row">
+        <li *ngFor="let item of noteItems" class="wp-about-note-item wp-col -xs12 -sm6 -md3">
+          <div class="wp-about-note-item-inner">
+            <div class="wp-note-graphic-wrap">
+              <div class="wp-note-graphic">
+                <i class="wp-icon-x"></i>
+              </div>
             </div>
+            <div class="wp-note-title">{{ item.title }}</div>
+            <div class="wp-note-text">{{ item.text }}</div>
           </div>
-          <div class="wp-note-title">{{ item.title }}</div>
-          <div class="wp-note-text">{{ item.text }}</div>
+        </li>
+      </ul>
+      <div class="wp-row">
+        <div class="wp-col -xs12 -md5">
+          <div class="wp-me">
+            <img class="wp-me-img" src="/assets/images/me/me-hexagon.png" />
+            <div class="wp-me-title">Who's this guy?</div>
+            <div class="wp-me-text">I'm the Front-End Developer for EyeCue Lab in Portland, OR. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.</div>
+          </div>
         </div>
-      </li>
-    </ul>
-    <div class="wp-row">
-      <div class="wp-col -xs12 -md5">
-        <div class="wp-me">
-          <img class="wp-me-img" src="/assets/images/me/me-hexagon.png" />
-          <div class="wp-me-title">Who's this guy?</div>
-          <div class="wp-me-text">I'm the Front-End Developer for EyeCue Lab in Portland, OR. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.</div>
+        <div class="wp-col -xs12 -md6 -md-offset1">
+          <wp-skill-chart [data]="skillChartData"></wp-skill-chart>
         </div>
-      </div>
-      <div class="wp-col -xs12 -md6 -md-offset1">
-        <wp-skill-chart [data]="skillChartData"></wp-skill-chart>
       </div>
     </div>
   </section>
