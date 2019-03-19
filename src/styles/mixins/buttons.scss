@@ -6,9 +6,11 @@
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @include open-sans-semibold;
   font-size: $wp-fs-sm;
+  text-align: center;
 
   color: $color;
   background-color: $bg-color;

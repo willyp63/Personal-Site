@@ -1,10 +1,9 @@
 @import 'index.scss';
 
-$bg-color: $grey-100;
+$bg-color: $grey-200;
 
 .wp-projects {
   padding-bottom: 128px;
-  background-color: $bg-color;
 }
 
 .wp-title {
@@ -36,7 +35,7 @@ $bg-color: $grey-100;
 
   background-color: $bg-color;
   opacity: 0;
-  transition: opacity $wp-tick;
+  transition: opacity $wp-tick * 2;
 
   &:hover {
     opacity: 1;
@@ -70,6 +69,7 @@ $bg-color: $grey-100;
   > a {
     @include wp-btn($pink-A400, $bg-color);
 
+    min-width: 48px;
     margin-right: 12px;
     ~ a { margin-right: 0; }
   }
