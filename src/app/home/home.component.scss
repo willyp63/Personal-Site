@@ -1,15 +1,13 @@
 @import 'index.scss';
 
-$bg-color: $blue-grey-900;
-
 .wp-home {
+  position: relative;
   height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  background-color: $bg-color;
-  color: $white;
+  background-color: $blue-grey-800;
 }
 
 .wp-text-block {
@@ -23,6 +21,7 @@ $bg-color: $blue-grey-900;
   font-size: $wp-fs-lg;
   text-align: center;
   line-height: 1.25;
+  color: $white;
 
   @include wp-media(sm) {
     font-size: $wp-fs-xlg;
@@ -39,8 +38,18 @@ $bg-color: $blue-grey-900;
 }
 
 .wp-link {
-  @include wp-btn($white, $bg-color);
+  @include wp-btn-primary($pink-A400, $white, $grey-200);
 
   margin-top: 12px;
   @include wp-media(sm) { margin-top: 20px; }
+}
+
+.wp-content {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }

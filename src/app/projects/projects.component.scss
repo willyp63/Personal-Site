@@ -67,7 +67,7 @@ $bg-color: $grey-200;
   display: flex;
 
   > a {
-    @include wp-btn($pink-A400, $bg-color);
+    @include wp-btn-secondary($pink-A400, $bg-color);
 
     min-width: 48px;
     margin-right: 12px;

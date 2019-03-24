@@ -1,8 +1,6 @@
-@mixin wp-btn($color, $bg-color) {
+@mixin wp-btn-shared($color, $bg-color) {
   height: 36px;
   padding: 0 12px;
-  border: 2px solid $color;
-  border-radius: 2px;
 
   display: flex;
   align-items: center;
@@ -14,23 +12,40 @@
 
   color: $color;
   background-color: $bg-color;
+  border-radius: 2px;
 
-  transition-property: color, background-color;
-  transition-duration: $wp-tick;
+  transition: all $wp-tick;
 
   > i {
     margin-left: 8px;
     font-size: $wp-icon-fs-sm;
   }
 
-  &:hover {
-    background-color: $color;
-    color: $bg-color;
-  }
-
   @include wp-media(md) {
     height: 48px;
     padding: 0 20px;
     font-size: $wp-fs-md;
+  }
+}
+
+@mixin wp-btn-primary($color, $bg-color, $hover-bg-color) {
+  @include wp-btn-shared($color, $bg-color);
+
+  @include z-depth(1);
+
+  &:hover {
+    @include z-depth(2);
+    background-color: $hover-bg-color;
+  }
+}
+
+@mixin wp-btn-secondary($color, $bg-color) {
+  @include wp-btn-shared($color, $bg-color);
+
+  border: 2px solid $color;
+  
+  &:hover {
+    background-color: $color;
+    color: $bg-color;
   }
 }
