@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { AppLayoutModule } from '@app/app-layout/app-layout.module';
 import { RoutingModule } from '@app/routes/routing.module';
+import { D3PlaygroundComponent } from './d3-playground/d3-playground.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { RoutingModule } from '@app/routes/routing.module';
   ],
   declarations: [
     HomeComponent,
+    D3PlaygroundComponent,
   ],
   exports: [
     HomeComponent,
