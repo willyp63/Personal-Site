@@ -4,6 +4,7 @@ import { NavBarComponent } from './nav-bar.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { RoutingModule } from '@app/routes/routing.module';
 import { SharedModule } from '@app/shared/shared.module';
+import { BubblesComponent } from './nav-menu/bubbles/bubbles.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { SharedModule } from '@app/shared/shared.module';
   declarations: [
     NavBarComponent,
     NavMenuComponent,
+    BubblesComponent,
   ],
   exports: [
     NavBarComponent,

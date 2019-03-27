@@ -1,6 +1,7 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { trigger, style, state, transition, animate } from '@angular/animations';
 import { wpAnimationTicks } from '@app/shared/animations/constants';
+import { BubblesComponent } from './bubbles/bubbles.component';
 
 @Component({
   selector: 'wp-nav-menu',
@@ -23,7 +24,19 @@ import { wpAnimationTicks } from '@app/shared/animations/constants';
   ]
 })
 export class NavMenuComponent {
-  @Input() isOpen = false;
+  @ViewChild(BubblesComponent) bubbles: BubblesComponent;
+
+  @Input()
+  set isOpen(isOpen: boolean) {
+    this._isOpen = isOpen;
+
+    isOpen ? this.bubbles.restart() : this.bubbles.stop();
+  }
+
+  get isOpen() { return this._isOpen; }
+
+  private _isOpen = false;
+
   @Output() shouldClose: EventEmitter<void> = new EventEmitter<void>();
 
   readonly mainLinks = [
