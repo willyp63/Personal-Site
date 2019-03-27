@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SkillChartData } from '@app/shared/components/skill-chart/skill-chart.model';
+import { SkillData } from '@app/shared/components/skill-chart/skill-chart.model';
 
 @Component({
   selector: 'wp-about',
@@ -8,50 +8,58 @@ import { SkillChartData } from '@app/shared/components/skill-chart/skill-chart.m
 })
 export class AboutComponent {
 
-  readonly skillChartData: SkillChartData = {
-    skills: [
-      {
-        name: 'CSS',
-        proficiency: 80,
-      },
-      {
-        name: 'HTML',
-        proficiency: 90,
-      },
-      {
-        name: 'React',
-        proficiency: 70,
-      },
-      {
-        name: 'Javascript',
-        proficiency: 80,
-      },
-      {
-        name: 'Angular',
-        proficiency: 70,
-      },
-      {
-        name: 'Node.js',
-        proficiency: 50,
-      },
-      {
-        name: 'Ruby/Rails',
-        proficiency: 40,
-      },
-      {
-        name: 'Mock Skill 0',
-        proficiency: Math.floor(Math.random() * 40) + 61,
-      },
-      {
-        name: 'Mock Skill 1',
-        proficiency: Math.floor(Math.random() * 40) + 61,
-      },
-      {
-        name: 'Mock Skill 2',
-        proficiency: Math.floor(Math.random() * 40) + 61,
-      },
-    ],
-  };
+  readonly skills: SkillData[] = [
+    {
+      name: 'CSS',
+      proficiency: .8,
+      radius: 0,
+    },
+    {
+      name: 'HTML',
+      proficiency: .9,
+      radius: 0,
+    },
+    {
+      name: 'React',
+      proficiency: .7,
+      radius: 0,
+    },
+    {
+      name: 'Javascript',
+      proficiency: .8,
+      radius: 0,
+    },
+    {
+      name: 'Angular',
+      proficiency: .7,
+      radius: 0,
+    },
+    {
+      name: 'Node.js',
+      proficiency: .5,
+      radius: 0,
+    },
+    {
+      name: 'Ruby/Rails',
+      proficiency: .4,
+      radius: 0,
+    },
+    {
+      name: 'Mock Skill 0',
+      proficiency: Math.random(),
+      radius: 0,
+    },
+    {
+      name: 'Mock Skill 1',
+      proficiency: Math.random(),
+      radius: 0,
+    },
+    {
+      name: 'Mock Skill 2',
+      proficiency: Math.random(),
+      radius: 0,
+    },
+  ];
 
   readonly noteItems = [
     {

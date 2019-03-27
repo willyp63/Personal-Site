@@ -1,47 +1,7 @@
 @import 'index.scss';
 
-.wp-skill-row {
-  height: 28px;
-  background-color: $grey-200;
-
-  display: flex;
-
-  margin-bottom: 14px;
-  ~ .wp-skill-row { margin-bottom: 14px; }
-}
-
-.wp-skill-name {
-  display: inline-block;
-  width: 110px;
+.wp-skill-chart {
+  width: 100%;
   height: 100%;
-  background-color: $teal-400;
-
-  @include open-sans-semibold;
-  text-align: center;
-  line-height: 28px;
-  color: $white;
-}
-
-.wp-skill-proficiency {
-  flex-grow: 1;
-
-  display: flex;
-  align-items: stretch;
-}
-
-.wp-skill-proficiency-bar {
-  flex-grow: 1;
-}
-
-.wp-skill-proficiency-bar-inner {
-  height: 100%;
-  background-color: $teal-600;
-}
-
-.wp-skill-proficiency-label {
-  align-self: center;
-  padding: 0 12px;
-
-  @include open-sans-light;
-  color: $grey-600;
+  background-color: red;
 }

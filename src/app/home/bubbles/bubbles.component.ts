@@ -96,6 +96,7 @@ export class BubblesComponent implements OnInit {
 
         this.logFPS();
       });
+      
   }
 
   private ageNodes() {
