@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600');
 @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+@import url('https://fonts.googleapis.com/css?family=Rubik:700');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
 $open-sans: 'Open Sans', sans-serif;
 $black-han-sans: 'Black Han Sans', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$permanent-marker: 'Permanent Marker', cursive;
 
 // Open Sans
 @mixin open-sans-light {
@@ -32,6 +36,20 @@ $black-han-sans: 'Black Han Sans', sans-serif;
 // Black Han San
 @mixin black-han-sans {
   font-family: $black-han-sans;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Rubik
+@mixin rubik-bold {
+  font-family: $rubik;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Permanent Marker
+@mixin permanent-marker {
+  font-family: $permanent-marker;
   font-weight: 400;
   font-style: normal;
 }

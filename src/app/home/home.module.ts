@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { AppLayoutModule } from '@app/app-layout/app-layout.module';
 import { RoutingModule } from '@app/routes/routing.module';
+import { BubblesComponent } from './bubbles/bubbles.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { RoutingModule } from '@app/routes/routing.module';
   ],
   declarations: [
     HomeComponent,
+    BubblesComponent,
   ],
   exports: [
     HomeComponent,

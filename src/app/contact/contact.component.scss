@@ -41,6 +41,6 @@ $bg-color: $grey-100;
   }
 
   button[type="submit"] {
-    @include wp-btn-secondary($pink-A400, $bg-color)
+    @include wp-btn-secondary($red-A200, $bg-color)
   }
 }

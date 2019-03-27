@@ -28,7 +28,6 @@ export class BubblesComponent implements OnInit {
     this.measureBubblesElSize();
     this.initSimulation();
     this.renderSimulation();
-    this.stop();
   }
 
   @HostListener('document:mousemove', ['$event'])

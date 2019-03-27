@@ -1,6 +1,7 @@
 @mixin h1 {
   padding: 96px 0 64px 0;
   font-size: $wp-fs-xxlg;
+  @include rubik-bold;
 
   &::after {
     display: block;

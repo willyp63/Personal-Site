@@ -31,7 +31,7 @@
       margin-bottom: 24px;
 
       > a {
-        @include open-sans;
+        @include rubik-bold;
         font-size: $wp-fs-xlg;
         letter-spacing: 2px;
         color: $white;
@@ -57,7 +57,6 @@
         margin-bottom: 36px;
 
         > a {
-          @include open-sans;
           font-size: $wp-fs-xxlg;
           letter-spacing: 4px;
         }
