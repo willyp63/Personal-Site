@@ -18,10 +18,22 @@
 }
 
 .wp-hamburger {
+  @include wp-focusable;
+
   margin-top: 20px;
+  width: 64px;
+  height: 64px;
 
   font-size: $wp-icon-fs-lg;
-  transition: color $wp-tick;
+  color: $black;
+
+  background-color: $white;
+  border-radius: 50%;
 
   pointer-events: all;
+
+  &.-open {
+    color: $white;
+    background-color: transparent;
+  }
 }

@@ -1,4 +1,6 @@
 @mixin wp-btn-shared($color, $bg-color) {
+  @include wp-focusable;
+
   height: 36px;
   padding: 0 12px;
 

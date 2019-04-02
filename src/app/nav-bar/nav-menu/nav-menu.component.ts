@@ -44,16 +44,4 @@ export class NavMenuComponent {
       href: '/blog',
     },
   ];
-
-  readonly secondaryLinks = [
-    {
-      text: 'RESUME',
-      href: '/assets/resumes/resume.pdf',
-      isAsset: true,
-    },
-    {
-      text: 'CONTACT',
-      href: '/contact',
-    },
-  ];
 }

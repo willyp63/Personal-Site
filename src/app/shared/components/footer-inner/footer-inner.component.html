@@ -2,9 +2,14 @@
   <span class="wp-copyright">© 2019 Wil Pirino.</span>
   <nav>
     <ul class="wp-social-links">
-      <li class="wp-social-link-item"><a href="#"><i class="wp-icon-github"></i></a></li>
-      <li class="wp-social-link-item"><a href="#"><i class="wp-icon-linkedin"></i></a></li>
-      <li class="wp-social-link-item"><a href="#"><i class="wp-icon-stackoverflow"></i></a></li>
+      <li *ngFor="let link of links" class="wp-social-link-item">
+        <a *ngIf="link.isExternal" [href]="link.href">
+          <i [ngClass]="'wp-icon-' + link.icon"></i>
+        </a>
+        <a *ngIf="!link.isExternal" [routerLink]="link.href">
+          <i [ngClass]="'wp-icon-' + link.icon"></i>
+        </a>
+      </li>
     </ul>
   </nav>
 </div>

@@ -7,4 +7,26 @@ import { Component, Input } from '@angular/core';
 })
 export class FooterInnerComponent {
   @Input() inverseColors: boolean = false;
+
+  readonly links = [
+    {
+      icon: 'file',
+      href: '/assets/resumes/resume.pdf',
+      isExternal: true,
+    },
+    {
+      icon: 'mail',
+      href: '/contact',
+    },
+    {
+      icon: 'github',
+      href: 'https://github.com/willyp63',
+      isExternal: true,
+    },
+    {
+      icon: 'linkedin',
+      href: 'https://www.linkedin.com/in/wilpirino/',
+      isExternal: true,
+    },
+  ];
 }

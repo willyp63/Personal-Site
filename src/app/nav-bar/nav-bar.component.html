@@ -1,6 +1,6 @@
 <wp-nav-menu [isOpen]="isMenuOpen" (shouldClose)="this.closeMenu()"></wp-nav-menu>
 <header class="wp-nav-bar wp-container">
-  <button class="wp-hamburger" [style.color]="currentColor" (click)="isMenuOpen ? this.closeMenu() : this.openMenu()">
+  <button class="wp-hamburger" [ngClass]="{'-open': isMenuOpen}" (click)="isMenuOpen ? this.closeMenu() : this.openMenu()" tabindex="1">
     <i [ngClass]="isMenuOpen ? 'wp-icon-x' : 'wp-icon-hamburger'"></i>
   </button>
 </header>

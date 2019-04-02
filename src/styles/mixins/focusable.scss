@@ -1,0 +1,6 @@
+@mixin wp-focusable {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 3pt 2pt $light-blue-500;
+  }
+}

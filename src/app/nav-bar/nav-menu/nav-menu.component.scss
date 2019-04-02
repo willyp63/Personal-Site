@@ -31,6 +31,8 @@
       margin-bottom: 24px;
 
       > a {
+        @include wp-focusable;
+
         @include rubik-bold;
         font-size: $wp-fs-xlg;
         letter-spacing: 2px;
@@ -82,6 +84,8 @@
       }
 
       > a {
+        @include wp-focusable;
+        
         color: $white;
 
         &::after {
