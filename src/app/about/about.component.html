@@ -1,31 +1,25 @@
 <wp-app-layout>
-  <section class="wp-projects">
+  <section class="wp-about">
     <div class="wp-container">
       <h1 class="wp-title">ABOUT</h1>
-      <ul class="wp-about-notes wp-row">
-        <li *ngFor="let item of noteItems" class="wp-about-note-item wp-col -xs12 -sm6 -md3">
-          <div class="wp-about-note-item-inner">
-            <div class="wp-note-graphic-wrap">
-              <div class="wp-note-graphic">
-                <i class="wp-icon-x"></i>
-              </div>
-            </div>
-            <div class="wp-note-title">{{ item.title }}</div>
-            <div class="wp-note-text">{{ item.text }}</div>
-          </div>
-        </li>
-      </ul>
       <div class="wp-row">
-        <div class="wp-col -xs12 -md5">
-          <div class="wp-me">
-            <img class="wp-me-img" src="/assets/images/me/me-hexagon.png" />
-            <div class="wp-me-title">Who's this guy?</div>
-            <div class="wp-me-text">I'm the Front-End Developer for EyeCue Lab in Portland, OR. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.</div>
+        <div class="wp-img-wrap wp-col -xs12 -lg4">
+          <div class="wp-img" [style.background-image]="'url(/assets/images/me/me.jpg)'" alt="Wil Pirino">
+            <svg class="wp-slant" viewBox="0 0 1 1" preserveAspectRatio="none">
+              <polygon points="0 0, 1 0, 1 1"></polygon>
+            </svg>
           </div>
         </div>
-        <div class="wp-skill-chart-wrap wp-col -xs12 -md6 -md-offset1">
-          <wp-skill-chart [skills]="skills"></wp-skill-chart>
+        <div class="wp-col -xs12 -lg8">
+          <div class="wp-text">
+            <h2 class="wp-job-title">Sr Distributed Developer at Transamerica</h2>
+            <h3 class="wp-location">Denver, CO</h3>
+            <p>I'm mostly self-taught, beginning early in high-school when I fell in love with the idea of coding video games. I taught myself Java and latter C/Objective-C so that I could publish my games on the App Store.<br><br>After high-school, I went straight into the CS program at Purdue. I Studied there for about 2 years before applying to App Academy, a coding bootcamp in SF. After their very intensive course, I was able to land a job at Google as a web developer for their AdWords platform.<br><br>A little over a year ago, I made the move to Denver to be closer to friends/family. I now work for Transamerica, where I've spent most of my time heading up the front-end for their public sites.</p>
+          </div>
         </div>
+      </div>
+      <div class="wp-row">
+        <div class="wp-skills wp-col -xs12"></div>
       </div>
     </div>
   </section>

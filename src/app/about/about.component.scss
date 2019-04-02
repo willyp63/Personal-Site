@@ -1,6 +1,6 @@
 @import 'index.scss';
 
-.wp-projects {
+.wp-about {
   padding-bottom: 128px;
 }
 
@@ -9,95 +9,63 @@
   text-align: center;  
 }
 
-.wp-about-notes {
-  padding-bottom: 64px;
-}
+.wp-img-wrap {
+  overflow: hidden;
+  max-height: 600px;
 
-.wp-about-note-item {
+  > .wp-img {
+    height: 0;
+    padding-top: 56.25%;
   
-}
-
-.wp-about-note-item-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 20px;
-
-  & ~ .wp-about-note-item-inner {
-    padding-left: 20px;
+    background-size: cover;
+    background-position: 50% 0%;
+  
+    > .wp-slant {
+      height: 100%;
+      width: 5vw;
+      float: right;
+  
+      fill: $white;
+    }
+  
+    @include wp-media(lg) {
+      height: 100%;
+      padding-top: 0;
+    }
   }
 }
 
-.wp-note-graphic-wrap {
-  @include hexagon-wrap(100px);
-}
+.wp-text {
+  padding-top: 48px;
 
-.wp-note-graphic {
-  @include hexagon;
-  background-color: $light-blue-800;
+  font-size: 24px;
+  line-height: 28px;
 
-  > i {
-    position: relative;
-    left: 0;
-    right: 0;
-    top: 32px;
-    z-index: 1;
-    font-size: $wp-icon-fs-lg;
-    color: $white;
+  > .wp-job-title {
+    @include open-sans-semibold;
+    font-size: 28px;
+    padding-bottom: 8px;
+  }
+
+  > .wp-location {
+    @include open-sans-semibold;
+    font-size: 20px;
+  }
+
+  > p {
+    padding-top: 1em;
+  }
+
+  @include wp-media(lg) {
+    padding-top: 0;
+    padding-left: 48px;
   }
 }
 
-.wp-note-title {
-  padding-top: 20px;
+.wp-skills {
+  margin-top: 48px;
 
-  @include open-sans-semibold;
-  font-size: $wp-fs-lg;
-  text-align: center;
-}
+  @include wp-under-construction;
 
-.wp-note-text {
-  padding-top: 8px;
-
-  @include open-sans-light;
-  font-size: $wp-fs-md;
-  text-align: center;
-  line-height: 1.25;
-}
-
-.wp-me {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding-bottom: 48px;
-
-  @include wp-media(md) {
-    padding-bottom: 0;
-  }
-}
-
-.wp-me-img {
-
-}
-
-.wp-me-title {
-  padding-top: 20px;
-
-  @include open-sans-semibold;
-  font-size: $wp-fs-lg;
-  text-align: center;
-}
-
-.wp-me-text {
-  padding-top: 8px;
-
-  @include open-sans-light;
-  font-size: $wp-fs-md;
-  text-align: center;
-  line-height: 1.25;
-}
-
-.wp-skill-chart-wrap {
   height: 400px;
 }

@@ -17,7 +17,7 @@ $bg-color: $blue-grey-900;
 }
 
 .wp-text {
-  @include permanent-marker;
+  @include rubik-bold;
   font-size: $wp-fs-lg;
   text-align: center;
   line-height: 1.25;
