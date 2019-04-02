@@ -1,9 +1,10 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { SkillData } from './skill-chart.model';
 import * as d3 from 'd3';
+import * as d3Cloud from 'd3-cloud';
 import { WPVector } from '@app/shared/utils/vector';
 
-const MAX_RADIUS = 80;
+const FONT_SIZE_MULTIPLIER = .3;
 
 @Component({
   selector: 'wp-skill-chart',
@@ -16,51 +17,42 @@ export class SkillChartComponent implements OnInit {
 
   @ViewChild('skillChart') private skillChartEl: ElementRef;
 
+  private size: WPVector;
+
   ngOnInit() {
     this.size = new WPVector(
       this.skillChartEl.nativeElement.clientWidth,
       this.skillChartEl.nativeElement.clientHeight,
     );
+    const maxFontSize = Math.min(this.size.x, this.size.y) * FONT_SIZE_MULTIPLIER;
 
-    this.skills.forEach(skill => {
-      skill.x = Math.random() * this.size.x;
-      skill.y = Math.random() * this.size.y;
-      skill.radius = this.getRadius(skill);
-    });
+    const layout = d3Cloud()
+      .size([this.size.x, this.size.y])
+      .words(this.skills.map((d: SkillData) => {
+        return { text: d.name, size: d.proficiency * maxFontSize } as d3Cloud.Word;
+      }))
+      .padding(5)
+      .font('Impact')
+      .fontSize((d: d3Cloud.Word) => d.size)
+      .on('end', this.render.bind(this));
 
-    this.simulation = d3.forceSimulation(this.skills)
-      .velocityDecay(0.1)
-      .force('centerX', d3.forceX(this.size.x / 2))
-      .force('centerY', d3.forceY(this.size.y / 2))
-      .force('collision', d3.forceCollide((d: SkillData) => d.radius).iterations(3))
-      .on('tick', () => {
-        this.render();
-      });
+    layout.start();
   }
 
-  private size = new WPVector(0, 0);
-  private simulation: d3.Simulation<SkillData, undefined>;
+  private render(words: d3Cloud.Word[]) {
+    console.log(words);
 
-  private getRadius(node: SkillData) {
-    return node.proficiency * MAX_RADIUS;
-  }
-
-  private render() {
-    const selection = d3.select('svg.wp-skill-chart').selectAll('g').data(this.skills);
-
-    const enter = selection.join('g')
-      .attr('transform', (d: SkillData) => `translate(${d.x - d.radius / 2}, ${d.y - d.radius / 2})`);
-
-    enter
-      .append('circle')
-      .attr('r', (d: SkillData) => d.radius)
-      .attr('fill', (d: SkillData) => d3.schemeCategory10[d.index % 10]);
-
-    enter
-      .append('text')
-      .text((d: SkillData) => d.name)
-      .attr('dx', -20)
-      .attr('dy', 8);
+    d3.select('#wp-skill-chart')
+      .append('g')
+        .attr('transform', `translate(${this.size.x / 2},${this.size.y / 2})`)
+      .selectAll('text')
+        .data(words)
+      .enter().append('text')
+        .style('font-size', (d: d3Cloud.Word) => `${d.size}px`)
+        .style('font-family', 'Impact')
+        .attr('text-anchor', 'middle')
+        .attr('transform', (d: d3Cloud.Word) => `translate(${[d.x, d.y]})rotate(${d.rotate})`)
+        .text((d: d3Cloud.Word) => d.text);
   }
 
 }
