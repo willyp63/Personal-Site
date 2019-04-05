@@ -1,5 +1,4 @@
 @mixin h1 {
-  padding: 96px 0 64px 0;
   font-size: $wp-fs-xxlg;
   @include rubik-bold;
 
@@ -8,7 +7,7 @@
     content: '';
     width: 128px;
     margin: 0 auto;
-    padding-top: 12px;
+    padding-top: 8px;
     border-bottom: 3px solid $black;
   }
 }

@@ -1,0 +1,42 @@
+@import '../mixins/breakpoints.scss';
+
+$wp-spacing-unit: 16px;
+
+$wp-spacings: (
+  xs: $wp-spacing-unit / 4,
+  sm: $wp-spacing-unit / 2,
+  md: $wp-spacing-unit,
+  lg: $wp-spacing-unit * 2,
+  xl: $wp-spacing-unit * 4,
+  2xl: $wp-spacing-unit * 8,
+  3xl: $wp-spacing-unit * 12,
+  4xl: $wp-spacing-unit * 16,
+  0: 0,
+);
+
+@mixin spacing-classes($spacing-name, $spacing-size, $extension: '') {
+  // padding
+  .-pt-#{$spacing-name}#{$extension} { padding-top: $spacing-size; }
+  .-pr-#{$spacing-name}#{$extension} { padding-right: $spacing-size; }
+  .-pb-#{$spacing-name}#{$extension} { padding-bottom: $spacing-size; }
+  .-pl-#{$spacing-name}#{$extension} { padding-left: $spacing-size; }
+  .-px-#{$spacing-name}#{$extension} { padding: 0 $spacing-size; }
+  .-py-#{$spacing-name}#{$extension} { padding: $spacing-size 0; }
+
+  // margin
+  .-mt-#{$spacing-name}#{$extension} { margin-top: $spacing-size; }
+  .-mr-#{$spacing-name}#{$extension} { margin-right: $spacing-size; }
+  .-mb-#{$spacing-name}#{$extension} { margin-bottom: $spacing-size; }
+  .-ml-#{$spacing-name}#{$extension} { margin-left: $spacing-size; }
+  .-mx-#{$spacing-name}#{$extension} { margin: 0 $spacing-size; }
+  .-my-#{$spacing-name}#{$extension} { margin: $spacing-size 0; }
+}
+
+@each $spacing-name, $spacing-size in $wp-spacings {
+  @include spacing-classes($spacing-name, $spacing-size);
+  @each $breakpoint-name, $breakpoint-width in $wp-breakpoints {
+    @include wp-media($breakpoint-name) {
+      @include spacing-classes($spacing-name, $spacing-size, '__#{$breakpoint-name}');
+    }
+  }
+}

@@ -39,9 +39,5 @@ export class NavMenuComponent {
       text: 'PROJECTS',
       href: '/projects',
     },
-    {
-      text: 'BLOG',
-      href: '/blog',
-    },
   ];
 }

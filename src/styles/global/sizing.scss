@@ -1,0 +1,19 @@
+@import '../mixins/breakpoints.scss';
+
+@mixin sizing-classes($extension: '') {
+  .-h-0#{$extension} { height: 0; }
+  .-h-100#{$extension} { height: 100%; }
+
+  .-w-0#{$extension} { width: 0; }
+  .-w-100#{$extension} { width: 100%; }
+
+  .-aspect-16x9#{$extension} { padding-top: 56.25%; }
+  .-aspect-1x1#{$extension} { padding-top: 100%; }
+}
+
+@include sizing-classes();
+@each $breakpoint-name, $breakpoint-width in $wp-breakpoints {
+  @include wp-media($breakpoint-name) {
+    @include sizing-classes('__#{$breakpoint-name}');
+  }
+}

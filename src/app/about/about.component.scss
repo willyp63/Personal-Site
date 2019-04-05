@@ -1,74 +1,60 @@
 @import 'index.scss';
 
-.wp-about {
-  padding-bottom: 128px;
-}
-
 .wp-title {
   @include h1;
   text-align: center;  
 }
 
 .wp-img-wrap {
-  overflow: hidden;
-  max-height: 600px;
-
   > .wp-img {
-    height: 0;
-    padding-top: 56.25%;
-  
     background-size: cover;
     background-position: 50% 0%;
-  
-    > .wp-slant {
-      height: 100%;
-      width: 5vw;
-      float: right;
-  
-      fill: $white;
-    }
-  
-    @include wp-media(lg) {
-      height: 100%;
-      padding-top: 0;
-    }
+    border-radius: 50%;
   }
 }
 
 .wp-text {
-  padding-top: 48px;
-
   font-size: 24px;
   line-height: 28px;
 
-  > .wp-job-title {
+  > .wp-bio-title {
     @include open-sans-semibold;
     font-size: 28px;
     padding-bottom: 8px;
   }
 
-  > .wp-location {
-    @include open-sans-semibold;
-    font-size: 20px;
-  }
-
   > p {
     padding-top: 1em;
   }
+}
 
-  @include wp-media(lg) {
-    padding-top: 0;
-    padding-left: 48px;
-  }
+.wp-skill-chart-text {
+  @include open-sans-light;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .wp-skill-chart-wrap {
-  overflow: hidden;
-  max-height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   > .wp-skill-chart {
     position: relative;
-    height: 0;
-    padding-top: 56.25%;
+    width: 100%;
+    height: 50vw;
+    max-height: 500px;
+  }
+
+  > .wp-skill-chart-symbol {
+    font-size: 100px;
+
+    @include wp-media(sm) {
+      font-size: 200px;
+    }
+
+    @include wp-media(lg) {
+      font-size: 300px;
+    }
   }
 }

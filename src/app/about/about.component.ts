@@ -11,10 +11,14 @@ export class AboutComponent {
   readonly skills: SkillData[] = [
     {
       name: 'CSS',
-      proficiency: .8,
+      proficiency: .9,
     },
     {
       name: 'HTML',
+      proficiency: .9,
+    },
+    {
+      name: 'Javascript',
       proficiency: .9,
     },
     {
@@ -22,32 +26,88 @@ export class AboutComponent {
       proficiency: .7,
     },
     {
-      name: 'Javascript',
-      proficiency: .8,
-    },
-    {
       name: 'Angular',
       proficiency: .7,
     },
     {
-      name: 'Node.js',
-      proficiency: .5,
+      name: 'Vue',
+      proficiency: .3,
     },
     {
-      name: 'Ruby/Rails',
+      name: 'Node.js',
+      proficiency: .9,
+    },
+    {
+      name: 'Ruby on Rails',
       proficiency: .4,
     },
     {
-      name: 'Mock Skill 0',
-      proficiency: Math.random(),
+      name: 'SQL',
+      proficiency: .6,
     },
     {
-      name: 'Mock Skill 1',
-      proficiency: Math.random(),
+      name: 'PostgreSQL',
+      proficiency: .5,
     },
     {
-      name: 'Mock Skill 2',
-      proficiency: Math.random(),
+      name: 'JQuery',
+      proficiency: .7,
+    },
+    {
+      name: 'D3.js',
+      proficiency: .4,
+    },
+    {
+      name: 'C',
+      proficiency: .4,
+    },
+    {
+      name: 'Objective-C',
+      proficiency: .4,
+    },
+    {
+      name: 'Swift',
+      proficiency: .5,
+    },
+    {
+      name: 'Java',
+      proficiency: .6,
+    },
+    {
+      name: 'C#',
+      proficiency: .3,
+    },
+    {
+      name: 'Angular Dart',
+      proficiency: .5,
+    },
+    {
+      name: 'Unity',
+      proficiency: .3,
+    },
+    {
+      name: 'Express.js',
+      proficiency: .6,
+    },
+    {
+      name: 'Nest.js',
+      proficiency: .3,
+    },
+    {
+      name: 'GraphQL',
+      proficiency: .6,
+    },
+    {
+      name: 'RXJS',
+      proficiency: .6,
+    },
+    {
+      name: 'NGRX',
+      proficiency: .7,
+    },
+    {
+      name: 'Flux/Redux',
+      proficiency: .8,
     },
   ];
 
